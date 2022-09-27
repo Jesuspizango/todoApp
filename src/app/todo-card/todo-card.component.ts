@@ -37,6 +37,8 @@ export class TodoCardComponent implements OnInit, OnDestroy {
 
   deleteTask(task: Task) {
     // TODO(HACER EL ELIMINAR)
-    console.log(`Eliiminando ${task}`)
+    //console.log(`Eliiminando ${task}`)
+    const index = this.tasks.findIndex(tasks_ => task.title == tasks_.title) 
+    this.tasks.splice(index, 1)
   }
 }
